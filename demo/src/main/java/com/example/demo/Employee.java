@@ -4,13 +4,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import lombok.Data;
 
 @Data
 @Entity
 public class Employee {
     private @Id @GeneratedValue Long id;
+    @NotEmpty
     private String firstName;
+    @NotEmpty
     private String lastName;
     private String description;
 
